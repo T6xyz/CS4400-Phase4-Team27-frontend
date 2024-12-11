@@ -1,0 +1,34 @@
+<h1 style="text-align: center;">add_product()</h1>
+<div>
+    <form [formGroup]="p5Form" (ngSubmit)="runProcedure5()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Barcode:</mat-label>
+                    <input matInput type="text" id="barcode" formControlName="barcode">
+                    <mat-error *ngIf="this.p5Form.controls.barcode.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p5Form.controls.barcode.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Name:</mat-label>
+                    <input matInput type="text" id="name" formControlName="name">
+                    <mat-error *ngIf="this.p5Form.controls.name.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p5Form.controls.name.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Weight:</mat-label>
+                    <input matInput type="number" id="weight" formControlName="weight"><br>
+                    <mat-error *ngIf="this.p5Form.controls.weight.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

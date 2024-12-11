@@ -1,0 +1,36 @@
+<h1 style="text-align: center;">display_product_view()</h1>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+</style>
+<div>
+    <table class="center" style="height: 95%; width: 95%;" >
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Location</th>
+            <th>Amount Available</th>
+            <th>Low Price</th>
+            <th>High Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let v of dataSource">
+            <tr>
+                <td>{{ v.productName }}</td>
+                <td>{{ v.location }}</td>
+                <td>{{ v.amountAvailable }}</td>
+                <td>{{ v.lowPrice }}</td>
+                <td>{{ v.highPrice }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+    </table>
+</div>

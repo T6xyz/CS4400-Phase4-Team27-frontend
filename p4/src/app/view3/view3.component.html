@@ -1,0 +1,34 @@
+<h1 style="text-align: center;">display_driver_view()</h1>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+</style>
+<div>
+    <table class="center" style="height: 95%; width: 95%;" >
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>License ID</th>
+            <th>Driver Experience</th>
+            <th># of Vans</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let v of dataSource">
+            <tr>
+                <td>{{ v.username }}</td>
+                <td>{{ v.licenseID }}</td>
+                <td>{{ v.driverExperience }}</td>
+                <td>{{ v.numVan }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+    </table>
+</div>

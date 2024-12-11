@@ -1,0 +1,41 @@
+<h1 style="text-align: center;">add_location()</h1>
+<div>
+    <form [formGroup]="p9Form" (ngSubmit)="runProcedure9()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Label:</mat-label>
+                    <input matInput type="text" id="label" formControlName="label">
+                    <mat-error *ngIf="this.p9Form.controls.label.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p9Form.controls.label.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>X:</mat-label>
+                    <input matInput type="number" id="x" formControlName="x"><br>
+                    <mat-error *ngIf="this.p9Form.controls.x.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Y:</mat-label>
+                    <input matInput type="number" id="y" formControlName="y"><br>
+                    <mat-error *ngIf="this.p9Form.controls.y.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Space:</mat-label>
+                    <input matInput type="number" id="space" formControlName="space"><br>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

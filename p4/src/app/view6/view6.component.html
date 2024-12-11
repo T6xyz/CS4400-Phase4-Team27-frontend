@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">display_service_view()</h1>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+</style>
+<div>
+    <table class="center" style="height: 95%; width: 95%;" >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Long Name</th>
+            <th>Home Base</th>
+            <th>Manager</th>
+            <th>Revenue</th>
+            <th>Products Carried</th>
+            <th>Cost Carried</th>
+            <th>Weight Carried</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let v of dataSource">
+            <tr>
+                <td>{{ v.id }}</td>
+                <td>{{ v.longName }}</td>
+                <td>{{ v.homeBase }}</td>
+                <td>{{ v.manager }}</td>
+                <td>{{ v.revenue }}</td>
+                <td>{{ v.productsCarried }}</td>
+                <td>{{ v.costCarried }}</td>
+                <td>{{ v.weightCarried }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+    </table>
+</div>

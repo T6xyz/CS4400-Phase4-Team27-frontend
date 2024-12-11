@@ -1,0 +1,43 @@
+<h1 style="text-align: center;">start_funding()</h1>
+<div>
+    <form [formGroup]="p10Form" (ngSubmit)="runProcedure10()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Owner:</mat-label>
+                    <input matInput type="text" id="owner" formControlName="owner">
+                    <mat-error *ngIf="this.p10Form.controls.owner.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p10Form.controls.owner.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Amount:</mat-label>
+                    <input matInput type="number" id="amount" formControlName="amount"><br>
+                    <mat-error *ngIf="this.p10Form.controls.amount.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Long Name:</mat-label>
+                    <input matInput type="text" id="longName" formControlName="longName">
+                    <mat-error *ngIf="this.p10Form.controls.longName.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p10Form.controls.longName.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Fund Date:</mat-label>
+                    <input matInput type="date" id="fundDate" formControlName="fundDate">
+                    <mat-error *ngIf="this.p10Form.controls.fundDate.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p10Form.controls.fundDate.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+ 
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

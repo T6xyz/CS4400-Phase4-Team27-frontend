@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">display_location_view()</h1>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+</style>
+<div>
+    <table class="center" style="height: 95%; width: 95%;" >
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th>Resolved Long Name</th>
+            <th>x</th>
+            <th>y</th>
+            <th>space</th>
+            <th># of Vans</th>
+            <th>Van IDs</th>
+            <th>Remaining Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let v of dataSource">
+            <tr>
+                <td>{{ v.label }}</td>
+                <td>{{ v.resolvedLongName }}</td>
+                <td>{{ v.x }}</td>
+                <td>{{ v.y }}</td>
+                <td>{{ v.space }}</td>
+                <td>{{ v.numVans }}</td>
+                <td>{{ v.vanIDs }}</td>
+                <td>{{ v.remainingCapacity }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+    </table>
+</div>

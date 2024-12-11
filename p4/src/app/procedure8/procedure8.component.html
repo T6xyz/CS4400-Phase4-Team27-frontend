@@ -1,0 +1,46 @@
+<h1 style="text-align: center;">add_service()</h1>
+<div>
+    <form [formGroup]="p8Form" (ngSubmit)="runProcedure8()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>ID:</mat-label>
+                    <input matInput type="text" id="id" formControlName="id">
+                    <mat-error *ngIf="this.p8Form.controls.id.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p8Form.controls.id.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label> Long Name:</mat-label>
+                    <input matInput type="text" id="longName" formControlName="longName">
+                    <mat-error *ngIf="this.p8Form.controls.longName.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p8Form.controls.longName.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Home Base:</mat-label>
+                    <input matInput type="text" id="homeBase" formControlName="homeBase">
+                    <mat-error *ngIf="this.p8Form.controls.homeBase.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p8Form.controls.homeBase.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Manager:</mat-label>
+                    <input matInput type="text" id="manager" formControlName="manager">
+                    <mat-error *ngIf="this.p8Form.controls.manager.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p8Form.controls.manager.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+<h1 style="text-align: center;">add_van()</h1>
+<div>
+    <form [formGroup]="p6Form" (ngSubmit)="runProcedure6()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>ID:</mat-label>
+                    <input matInput type="text" id="id" formControlName="id">
+                    <mat-error *ngIf="this.p6Form.controls.id.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p6Form.controls.id.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Tag:</mat-label>
+                    <input matInput type="number" id="tag" formControlName="tag"><br>
+                    <mat-error *ngIf="this.p6Form.controls.tag.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Fuel:</mat-label>
+                    <input matInput type="number" id="fuel" formControlName="fuel"><br>
+                    <mat-error *ngIf="this.p6Form.controls.fuel.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Capacity:</mat-label>
+                    <input matInput type="number" id="capacity" formControlName="capacity"><br>
+                    <mat-error *ngIf="this.p6Form.controls.capacity.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Sales:</mat-label>
+                    <input matInput type="number" id="sales" formControlName="sales"><br>
+                    <mat-error *ngIf="this.p6Form.controls.sales.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Driven By:</mat-label>
+                    <input matInput type="text" id="drivenBy" formControlName="drivenBy">
+                    <mat-error *ngIf="this.p6Form.controls.drivenBy.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p6Form.controls.drivenBy.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

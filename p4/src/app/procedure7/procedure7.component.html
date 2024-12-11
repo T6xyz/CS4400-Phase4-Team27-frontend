@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">add_business()</h1>
+<div>
+    <form [formGroup]="p7Form" (ngSubmit)="runProcedure7()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Long Name:</mat-label>
+                    <input matInput type="text" id="longName" formControlName="longName">
+                    <mat-error *ngIf="this.p7Form.controls.longName.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p7Form.controls.longName.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Rating:</mat-label>
+                    <input matInput type="number" id="rating" formControlName="rating"><br>
+                    <mat-error *ngIf="this.p7Form.controls.rating.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Spent:</mat-label>
+                    <input matInput type="number" id="spent" formControlName="spent"><br>
+                    <mat-error *ngIf="this.p7Form.controls.spent.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Location:</mat-label>
+                    <input matInput type="text" id="location" formControlName="location">
+                    <mat-error *ngIf="this.p7Form.controls.location.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p7Form.controls.location.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

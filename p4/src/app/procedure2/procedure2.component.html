@@ -1,0 +1,84 @@
+<h1 style="text-align: center;">add_employee()</h1>
+<div>
+    <form [formGroup]="p2Form" (ngSubmit)="runProcedure2()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Username:</mat-label>
+                    <input matInput type="text" id="username" formControlName="username">
+                    <mat-error *ngIf="this.p2Form.controls.username.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.username.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>First Name:</mat-label>
+                    <input matInput type="text" id="firstName" formControlName="firstName">
+                    <mat-error *ngIf="this.p2Form.controls.firstName.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.firstName.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Last Name:</mat-label>
+                    <input matInput type="text" id="lastName" formControlName="lastName">
+                    <mat-error *ngIf="this.p2Form.controls.lastName.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.lastName.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Address:</mat-label>
+                    <input matInput type="text" id="address" formControlName="address">
+                    <mat-error *ngIf="this.p2Form.controls.address.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.address.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Birthdate:</mat-label>
+                    <input matInput type="date" id="birthdate" formControlName="birthdate"><br>
+                    <mat-error *ngIf="this.p2Form.controls.birthdate.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.birthdate.hasError('maxlength')">Year is not valid!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Tax ID:</mat-label>
+                    <input matInput type="text" id="taxID" formControlName="taxID">
+                    <mat-error *ngIf="this.p2Form.controls.taxID.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.taxID.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Hired:</mat-label>
+                    <input matInput type="date" id="hired" formControlName="hired"><br>
+                    <mat-error *ngIf="this.p2Form.controls.hired.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p2Form.controls.hired.hasError('maxlength')">Year is not valid!</mat-error>
+        
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Experience:</mat-label>
+                    <input matInput type="number" id="experience" formControlName="experience"><br>
+                    <mat-error *ngIf="this.p2Form.controls.experience.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Salary:</mat-label>
+                    <input matInput type="number" id="salary" formControlName="salary"><br>
+                    <mat-error *ngIf="this.p2Form.controls.salary.hasError('required')">This input is required!</mat-error>
+            
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

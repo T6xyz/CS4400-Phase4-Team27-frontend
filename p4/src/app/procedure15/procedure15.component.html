@@ -1,0 +1,49 @@
+<h1 style="text-align: center;">load_van()</h1>
+<div>
+    <form [formGroup]="p15Form" (ngSubmit)="runProcedure15()">
+        <div>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>ID:</mat-label>
+                    <input matInput type="text" id="id" formControlName="id">
+                    <mat-error *ngIf="this.p15Form.controls.id.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p15Form.controls.id.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Tag:</mat-label>
+                    <input matInput type="number" id="tag" formControlName="tag">
+                    <mat-error *ngIf="this.p15Form.controls.tag.hasError('required')">This input is required!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Barcode:</mat-label>
+                    <input matInput type="text" id="barcode" formControlName="barcode">
+                    <mat-error *ngIf="this.p15Form.controls.barcode.hasError('required')">This input is required!</mat-error>
+                    <mat-error *ngIf="this.p15Form.controls.barcode.hasError('maxlength')">The input size is too large!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>More Packages:</mat-label>
+                    <input matInput type="number" id="morePackages" formControlName="morePackages">
+                    <mat-error *ngIf="this.p15Form.controls.morePackages.hasError('required')">This input is required!</mat-error>
+                </mat-form-field>
+            </p>
+            <p style="text-align: center;">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>Price:</mat-label>
+                    <input matInput type="number" id="price" formControlName="price">
+                    <mat-error *ngIf="this.p15Form.controls.price.hasError('required')">This input is required!</mat-error>
+                </mat-form-field>
+            </p>
+
+ 
+            <p style="text-align: center;">
+                <button mat-flat-button type="submit" class="primary"  style="text-align: center;">Submit</button>
+            </p>    
+        </div>
+    </form>
+</div>

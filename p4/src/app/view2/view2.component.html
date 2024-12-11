@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">display_employee_view()</h1>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+</style>
+<div>
+    <table class="center" style="height: 95%; width: 95%;" >
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Tax ID</th>
+            <th>Salary</th>
+            <th>Hired</th>
+            <th>Employee Experience</th>
+            <th>License ID</th>
+            <th>Driving Experience</th>
+            <th>Manager Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let v of dataSource">
+            <tr>
+                <td>{{ v.username }}</td>
+                <td>{{ v.taxID }}</td>
+                <td>{{ v.salary}}</td>
+                <td>{{ v.hired }}</td>
+                <td>{{ v.employeeExperience }}</td>
+                <td>{{ v.licenseID }}</td>
+                <td>{{ v.drivingExperience }}</td>
+                <td>{{ v.managerStatus }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+    </table>
+</div>
